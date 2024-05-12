@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--suppress NavigationFile -->
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.synrgychapter3.MainActivity.activity.navigationcomponent.fragment.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_secondFragmentNavigation"
+            app:destination="@id/secondFragmentNavigation" />
+        <action
+            android:id="@+id/action_mainFragment_to_secondFragmentNavigation2"
+            app:destination="@id/secondFragmentNavigation" />
+    </fragment>
+    <fragment
+        android:id="@+id/secondFragmentNavigation"
+        android:name="com.example.synrgychapter3.MainActivity.activity.navigationcomponent.fragment.SecondFragmentNavigation"
+        android:label="SecondFragmentNavigation"
+        tools:layout="@layout/fragment_second_navigation">
+        <action
+            android:id="@+id/action_secondFragmentNavigation_to_thirdFragmentNavigation"
+            app:destination="@id/thirdFragmentNavigation" />
+    </fragment>
+    <fragment
+        android:id="@+id/thirdFragmentNavigation"
+        android:name="com.example.synrgychapter3.MainActivity.activity.navigationcomponent.fragment.FragmentThirdNavigation"
+        android:label="ThirdFragmentNavigation"
+        tools:layout="@layout/fragment_third_navigation">
+        <argument
+            android:name="title"
+            app:argType="string"
+            android:defaultValue="" />
+        <argument
+            android:name="image"
+            app:argType="string"
+            android:defaultValue="" />
+    </fragment>
+
+</navigation>
